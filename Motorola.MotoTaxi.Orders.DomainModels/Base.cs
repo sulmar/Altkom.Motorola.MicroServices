@@ -2,7 +2,8 @@
 
 namespace Motorola.MotoTaxi.Orders.DomainModels
 {
-    public class Class1
+    public abstract class Base
     {
+
     }
 }
