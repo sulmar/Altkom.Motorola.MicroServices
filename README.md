@@ -123,6 +123,13 @@ Pobranie pozycji określonego klucza
 geopos locations Vehicle2
 ~~~
 
+
+Obliczenie dystansu pomiędzy dwoma pozycjami
+~~~ 
+geodist locations Vehicle1 Vehicle4 km
+~~~
+
+
 Wyszukanie pozycji w określonym promieniu
 ~~~
 georadius locations 0 0 22000 km
