@@ -73,6 +73,25 @@ Pobranie wszystkich kluczy wg szablonu
 keys *
 ~~~
 
+
+ ### Inkrementacja
+ 
+ Dodanie 1 do klucza
+ ~~~
+ incr points
+ ~~~
+ 
+ Dodanie określonej liczby do klucza
+ ~~~
+  incrby points 10
+ ~~~
+ 
+ Odjęcie 1 od klucza
+ ~~~
+ decr points
+ ~~~
+ 
+
 ### Baza danych
 
 Wybór bazy danych
@@ -98,23 +117,6 @@ Pobranie wybranego pola
  hget person1 email
  ~~~
  
- 
- ### Inkrementacja
- 
- Dodanie 1 do klucza
- ~~~
- incr points
- ~~~
- 
- Dodanie określonej liczby do klucza
- ~~~
-  incrby points 10
- ~~~
- 
- Odjęcie 1 od klucza
- ~~~
- decr points
- ~~~
  
 
 ### Listy
@@ -163,13 +165,22 @@ Przesunięcie elementu pomiędzy zbiorami
 smove offline online user5
 ~~~
 
-Połączenie zbiorów
+Suma zbiorów
 ~~~
 sunion online offline
 ~~~
 
+Część wspólna zbiorów
+~~~
+sinter online offline
+~~~
 
-### Geo
+Różnica zbiorów
+~~~
+sdiff
+~~~
+
+### Typy przestrzenne
 
 Dodanie pozycji
 ~~~
