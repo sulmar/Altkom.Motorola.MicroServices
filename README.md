@@ -53,6 +53,81 @@ keys *
 ~~~
 
 
+###  Rekordy
+
+Dodanie 
+~~~
+hmset person1 name Marcin surname Sulecki email marcin.sulecki@altkom.pl
+~~~
+
+Pobranie wszystich pól
+~~~
+hgetall
+~~~
+
+Pobranie wybranego pola
+ ~~~
+ hget person1 email
+ ~~~
+ 
+ 
+ ### Inkrementacja
+ 
+ Dodanie 1 do klucza
+ ~~~
+ incr points
+ ~~~
+ 
+ Dodanie określonej liczby do klucza
+ ~~~
+  incrby points 10
+ ~~~
+ 
+ Odjęcie 1 od klucza
+ ~~~
+ decr points
+ ~~~
+ 
+
+### Listy
+
+Dodanie wartości do listy
+~~~ 
+lpush temp1 23
+lpush temp1 24
+lpush temp1 23.5
+~~~
+
+Pobranie zakresu wartości z listy
+~~~
+lrange temp1 0 10
+~~~
+
+Pobranie wartości z listy na podstawie indeksu
+~~~
+lindex temp1 2
+~~~
+
+### Geo
+
+Dodanie pozycji
+~~~
+geoadd locations 52.361389 19.115556 Vehicle1
+geoadd locations 52.361389 19.115556 Vehicle2
+geoadd locations 52.361389 19.115556 Vehicle3
+geoadd locations 52.361389 19.115556 Vehicle4
+~~~
+
+Pobranie pozycji określonego klucza
+~~~
+geopos locations Vehicle2
+~~~
+
+Wyszukanie pozycji w określonym promieniu
+~~~
+georadius locations 0 0 22000 km
+~~~
+
 ### Czyszczenie 
 
 Wyczyszczenie wszystkich kluczy ze wszystkich baz danych
