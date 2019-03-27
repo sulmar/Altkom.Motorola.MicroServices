@@ -136,6 +136,39 @@ Pobranie wartości z listy na podstawie indeksu
 lindex temp1 2
 ~~~
 
+
+### Zbiory
+
+Dodanie wartości do zbioru
+~~~
+sadd online user1
+sadd online user2
+sadd online user3
+sadd offline user4
+sadd offline user5
+~~~
+
+Pobranie elementów zbioru
+~~~
+smembers online
+~~~
+
+Usunięcie elementu ze zbioru
+~~~
+srem online user1
+~~~
+
+Przesunięcie elementu pomiędzy zbiorami
+~~~
+smove offline online user5
+~~~
+
+Połączenie zbiorów
+~~~
+sunion online offline
+~~~
+
+
 ### Geo
 
 Dodanie pozycji
