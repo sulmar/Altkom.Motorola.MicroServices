@@ -81,7 +81,7 @@ select 1
 ~~~
 
 
-###  Rekordy
+###  Tablice asocjacyjne
 
 Dodanie 
 ~~~
