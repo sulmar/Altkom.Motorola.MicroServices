@@ -42,10 +42,26 @@ Pobranie wartości
 get user1
 ~~~
 
+
+Usuniecie klucza
+~~~
+DEL user1
+~~~
+
+
+### TTL
+
 Dodanie wartości na określony czas (TTL)
 ~~~
 set vehicle1 ready ex 120
 ~~~
+
+Ustawienie czasu życia klucza
+~~~
+expire vehicle1 60
+~~~
+
+
 
 Pobranie czasu, który pozostał do wygaśnienia klucza
 ~~~
@@ -55,6 +71,13 @@ ttl vehicle1
 Pobranie wszystkich kluczy wg szablonu
 ~~~
 keys *
+~~~
+
+### Baza danych
+
+Wybór bazy danych
+~~~
+select 1
 ~~~
 
 
