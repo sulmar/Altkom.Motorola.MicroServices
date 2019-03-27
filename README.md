@@ -19,6 +19,11 @@ Sprawdzenie czy Redis odpowiada
 ping
 ~~~
 
+Śledzenie Redisa
+~~~
+monitor
+~~~
+
 ### Klucze
 
 Dodanie wartości
