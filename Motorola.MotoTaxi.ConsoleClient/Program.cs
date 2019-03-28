@@ -42,9 +42,11 @@ namespace Motorola.MotoTaxi.ConsoleClient
 
             Console.WriteLine("Connected.");
 
+            var orderFaker = new OrderFaker();
+
             while (true)
             {
-                Order order = new OrderFaker().Generate();
+                Order order = orderFaker.Generate();
 
                 await connection.SendAsync("AddedOrder", order);
 
