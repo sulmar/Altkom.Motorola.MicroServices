@@ -15,6 +15,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Motorola.MotoTaxi.Orders.Db
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Motorola.RedisDemo", "Motorola.RedisDemo\Motorola.RedisDemo.csproj", "{02DA564F-1896-414B-A306-27E4AFF7729F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Motorola.MotoTaxi.ConsoleClient", "Motorola.MotoTaxi.ConsoleClient\Motorola.MotoTaxi.ConsoleClient.csproj", "{65C64652-B013-48D6-89E3-440D550BFE09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Motorola.MotoTaxi.Locations.IServices", "Motorola.MotoTaxi.Locations.IServices\Motorola.MotoTaxi.Locations.IServices.csproj", "{B9384A4D-6AE0-4048-BB8B-843427E7D594}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Motorola.MotoTaxi.Locations.DomainModels", "Motorola.MotoTaxi.Locations.DomainModels\Motorola.MotoTaxi.Locations.DomainModels.csproj", "{75EF0250-12C4-4EA3-AD1C-11FEAA08B619}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Motorola.MotoTaxi.Locations.DbServices", "Motorola.MotoTaxi.Locations.DbServices\Motorola.MotoTaxi.Locations.DbServices.csproj", "{018B5560-9C99-4406-8BF7-57FC811FB356}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Motorola.MotoTaxi.Locations.Api", "Motorola.MotoTaxi.Locations.Api\Motorola.MotoTaxi.Locations.Api.csproj", "{C10D7999-25B5-4030-8F30-B5A60B1AEB01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +55,26 @@ Global
 		{02DA564F-1896-414B-A306-27E4AFF7729F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02DA564F-1896-414B-A306-27E4AFF7729F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02DA564F-1896-414B-A306-27E4AFF7729F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65C64652-B013-48D6-89E3-440D550BFE09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65C64652-B013-48D6-89E3-440D550BFE09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65C64652-B013-48D6-89E3-440D550BFE09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65C64652-B013-48D6-89E3-440D550BFE09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9384A4D-6AE0-4048-BB8B-843427E7D594}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9384A4D-6AE0-4048-BB8B-843427E7D594}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9384A4D-6AE0-4048-BB8B-843427E7D594}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9384A4D-6AE0-4048-BB8B-843427E7D594}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75EF0250-12C4-4EA3-AD1C-11FEAA08B619}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75EF0250-12C4-4EA3-AD1C-11FEAA08B619}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75EF0250-12C4-4EA3-AD1C-11FEAA08B619}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75EF0250-12C4-4EA3-AD1C-11FEAA08B619}.Release|Any CPU.Build.0 = Release|Any CPU
+		{018B5560-9C99-4406-8BF7-57FC811FB356}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{018B5560-9C99-4406-8BF7-57FC811FB356}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{018B5560-9C99-4406-8BF7-57FC811FB356}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{018B5560-9C99-4406-8BF7-57FC811FB356}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C10D7999-25B5-4030-8F30-B5A60B1AEB01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C10D7999-25B5-4030-8F30-B5A60B1AEB01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C10D7999-25B5-4030-8F30-B5A60B1AEB01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C10D7999-25B5-4030-8F30-B5A60B1AEB01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

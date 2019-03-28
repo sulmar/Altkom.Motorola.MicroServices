@@ -30,7 +30,15 @@ namespace Motorola.MotoTaxi.Orders.FakeServices.Fakers
             RuleFor(p => p.DriverId, f => f.Random.Int(0, 10));
             RuleFor(p => p.CustomerId, f => f.Random.Int(0, 10000));
 
-            Ignore(p => p.Destination);
+            // Ignore(p => p.Destination);
+
+            RuleFor(p => p.Destination, f =>
+                new Location
+                {
+                    Latitude = f.Address.Latitude(53, 55),
+                    Longitude = f.Address.Longitude(19, 21)
+                });
+
         }
     }
 
