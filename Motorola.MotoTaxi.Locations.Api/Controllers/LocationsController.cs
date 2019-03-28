@@ -25,7 +25,25 @@ namespace Motorola.MotoTaxi.Locations.Api.Controllers
 
             var locations = locationService.Get(myLocation);
 
+            if (!locations.Any())
+            {
+                return NotFound();
+            }
+
             return Ok(locations);
+        }
+
+        [HttpPost]
+        public IActionResult Post(VehicleLocation vehicleLocation)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            locationService.Add(vehicleLocation);
+
+            return CreatedAtRoute(new { Id = vehicleLocation.DeviceId }, vehicleLocation);
         }
     }
 }

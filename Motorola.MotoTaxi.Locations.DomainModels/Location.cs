@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Motorola.MotoTaxi.Locations.DomainModels
 {
@@ -25,6 +26,7 @@ namespace Motorola.MotoTaxi.Locations.DomainModels
             Location = location;
         }
 
+        [Required]
         public string DeviceId { get; set; }
         public Location Location { get; set; }
     }
@@ -37,8 +39,10 @@ namespace Motorola.MotoTaxi.Locations.DomainModels
             Longitude = longitude;
         }
 
-        public string DeviceId { get; set; }
+        [Required]
         public double Latitude { get; set; }
+
+        [Required]
         public double Longitude { get; set; }        
     }
 

@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Motorola.MotoTaxi.Orders.Api.Hubs;
 using Motorola.MotoTaxi.Orders.DbServices;
 using Motorola.MotoTaxi.Orders.FakeServices;
 using Motorola.MotoTaxi.Orders.FakeServices.Fakers;
@@ -49,6 +50,8 @@ namespace Motorola.MotoTaxi.Orders.Api
                 .AddDbContext<OrdersContext>(options => 
                     options.UseSqlServer(connectionString));
 
+            services.AddSignalR();
+
             // add package Microsoft.AspNetCore.Mvc.Formatters.Xml 2.1.1
             services
                 .AddMvc(options => options.RespectBrowserAcceptHeader=true) // domyslnie false
@@ -59,6 +62,8 @@ namespace Motorola.MotoTaxi.Orders.Api
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.UseSignalR(routes => routes.MapHub<OrdersHub>("/hubs/orders"));
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

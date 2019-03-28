@@ -1,4 +1,5 @@
-﻿using Motorola.MotoTaxi.Orders.DomainModels;
+﻿using Microsoft.AspNetCore.SignalR.Client;
+using Motorola.MotoTaxi.Orders.DomainModels;
 using Motorola.MotoTaxi.Orders.FakeServices.Fakers;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,8 @@ namespace Motorola.MotoTaxi.ConsoleClient
         {
             Console.WriteLine("Hello World!");
 
+            Task.Run(() => SignalRClientTestAsync());
+
             Task.Run(()=> GetOrdersTestAsync());
 
             Task.Run(()=> AddOrderTestAsync());
@@ -21,6 +24,42 @@ namespace Motorola.MotoTaxi.ConsoleClient
 
             Console.ReadKey();
         }
+
+
+        private static async Task SignalRClientTestAsync()
+        {
+            string url = "http://localhost:5000/hubs/orders";
+
+            // add package Microsoft.AspNetCore.SignalR.Client
+
+            HubConnection connection = new HubConnectionBuilder()
+                .WithUrl(url)
+                .Build();
+
+            Console.WriteLine("Connecting...");
+
+            await connection.StartAsync();
+
+            Console.WriteLine("Connected.");
+
+            while (true)
+            {
+                Order order = new OrderFaker().Generate();
+
+                await connection.SendAsync("AddedOrder", order);
+
+                Console.WriteLine("Sent order");
+
+                // Task.Delay(10);
+
+                await Task.Delay(TimeSpan.FromSeconds(1));
+            }
+
+
+
+
+        }
+       
 
         private static async Task AddOrderTestAsync()
         {
