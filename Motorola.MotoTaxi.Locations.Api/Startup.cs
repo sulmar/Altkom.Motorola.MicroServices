@@ -10,6 +10,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Motorola.MotoTaxi.Locations.DbServices;
+using Motorola.MotoTaxi.Locations.IServices;
+using StackExchange.Redis;
 
 namespace Motorola.MotoTaxi.Locations.Api
 {
@@ -25,6 +28,9 @@ namespace Motorola.MotoTaxi.Locations.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<ILocationService, DbLocationService>();
+            services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect("localhost"));
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
