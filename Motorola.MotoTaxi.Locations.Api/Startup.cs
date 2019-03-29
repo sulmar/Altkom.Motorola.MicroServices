@@ -30,7 +30,7 @@ namespace Motorola.MotoTaxi.Locations.Api
         {
             services.AddScoped<ILocationService, DbLocationService>();
             services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect("localhost"));
-
+            
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
