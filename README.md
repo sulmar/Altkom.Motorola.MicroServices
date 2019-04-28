@@ -14,6 +14,11 @@ Uruchomienie Redis w dockerze
 docker run --name my-redis -d -p 6379:6379 redis
 ~~~
 
+Uruchomienie trybu interaktywnego
+~~~
+docker exec -it my-redis redis-cli
+~~~
+
 Sprawdzenie czy Redis odpowiada
 ~~~
 ping
